@@ -12,7 +12,7 @@ const displayExercise = function () {
   const workout1 = todayExercise.value.trim();
   //   closure function, updates text
   function displayDay() {
-    hiddenExercise.innerText = `Today's exercise is: ${workout1}`;
+    hiddenExercise.innerText = `Today's exercise is: ${workout1} 🧘🏽‍♀️`;
   }
   displayDay();
 };
@@ -46,10 +46,11 @@ const hiddenPizza = document.querySelector("#pizza-output");
 // ------------------ Function: Medium Question ------------------- \\
 
 const pizzaTotal = function () {
-  let totalPizza =
-    Number(numSlices.value.trim()) / Number(numOfPeople.value.trim());
+  let totalPizza = (
+    Number(numSlices.value.trim()) / Number(numOfPeople.value.trim())
+  ).toFixed(2);
   let strPizza = totalPizza.toString();
-  hiddenPizza.innerText = ` Everyone gets ${strPizza} slices of pizza!`;
+  hiddenPizza.innerText = ` Everyone gets ${strPizza} slices of pizza! 🍕 😋`;
   console.log(` Everyone gets ${strPizza} slices of pizza!`);
 };
 
@@ -213,6 +214,10 @@ class Programmer extends Person {
     }
   }
 
+  listLanguage() {
+    return this.languages;
+  }
+
   learnLanguage(newLang) {
     for (let i = 0; i < this.languages.length; i++) {
       if (this.languages.includes(newLang)) {
@@ -223,23 +228,66 @@ class Programmer extends Person {
     }
     return this.languages;
   }
-
-  listLanguage() {
-    return this.languages;
-  }
 }
 // End of second class
 
-const eddie = new Person("eddie", 34, "programmer");
+const eduardo = new Person("Eduardo", 25, "Coding Apprentice");
 
-const eddie2 = new Programmer("Mr Jackson", 34, "back-end", [
+const jacob = new Programmer("Jacob", 34, "Backend Engineer", [
   "python",
   "html",
   "C++",
 ]);
 
-console.log(eddie.fetchJob());
-console.log(eddie.exercise());
-eddie2.completeTask();
-console.log(eddie2.offerNewTask());
-console.log(eddie2.listLanguage());
+const jackie = new Programmer("Jackie", 22, "Project Manager", [
+  "python",
+  "html",
+]);
+
+const elena = new Programmer("Elena", 26, "Senior Software Engineer", [
+  "python",
+  "Java",
+  "C++",
+  "NoSQL",
+  "Node.JS",
+]);
+
+console.log("Very Hard - Fetching Job of First Person: ", eduardo.fetchJob());
+console.log(
+  "Very Hard - Fetching excercise of First Person:",
+  eduardo.exercise()
+);
+console.log(
+  "Very Hard- Fetching a job from a new Class Constructor and then attempting to assign a task:",
+  jacob.fetchJob(),
+  jacob.offerNewTask()
+);
+
+console.log(
+  "Very hard - successfully giving an employee a new task:",
+  `Value of Jacob being busy is: ${jacob.completeTask()}.`,
+  jacob.offerNewTask()
+);
+console.log(
+  "Very Hard - fetching a list of languages that has been passed in:",
+  jacob.listLanguage()
+);
+console.log(
+  "Very Hard - fetching a list of languages that has been passed in:",
+  jacob.learnLanguage("PostgresSQL")
+);
+
+console.log(
+  "Very Hard - Same Tests on a different Programmer:",
+  jackie.fetchJob(),
+  jackie.offerNewTask(),
+  jackie.completeTask(),
+  jackie.offerNewTask(),
+  jackie.listLanguage()
+);
+
+console.log(
+  "assigning Jackie new Languages:",
+  jackie.learnLanguage("TailWind"),
+  jackie.learnLanguage("Some New AI thing")
+);
