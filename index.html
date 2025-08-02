@@ -7,5 +7,42 @@
     <link rel="stylesheet" href="style.css" />
     <script src="index.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <main class="container">
+      <h1>GI JS: Week 3</h1>
+      <!-- Exercise of the Day -->
+      <section class="challenge-card">
+        <h2>Easy: Exercise of the Day</h2>
+        <input type="text" data-exercise placeholder="Enter an exercise..." />
+        <button data-exercise-btn>Show Exercise</button>
+        <p id="exercise-output"></p>
+      </section>
+
+      <!-- Pizza Slicer -->
+      <section class="challenge-card">
+        <h2>Medium: Pizza Slicer</h2>
+        <input type="number" data-pizza-slices placeholder="Total slices" />
+        <input type="number" data-people-count placeholder="Number of people" />
+        <button data-pizza-btn>Calculate</button>
+        <p id="pizza-output"></p>
+      </section>
+
+      <!-- PII Accessor -->
+      <section class="challenge-card pii">
+        <h2>Private Info Test</h2>
+        <button data-pii-btn>Get Name</button>
+        <button data-pii-ssn>Get SSN</button>
+        <p id="pii-output"></p>
+      </section>
+
+      <section class="challenge-card">
+        <h2>Create Dev Profile</h2>
+        <input type="text" data-username placeholder="Name" />
+        <input type="number" data-age placeholder="Age" />
+        <input type="text" data-job placeholder="Job" />
+        <button data-exercise-btn>Show User Profile</button>
+        <p id="user-profile"></p>
+      </section>
+    </main>
+  </body>
 </html>

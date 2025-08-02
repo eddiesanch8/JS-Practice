@@ -1,6 +1,61 @@
-*{
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-    padding:0; 
-    margin:0; 
-    box-sizing: border-box;
+body {
+  font-family: Arial, sans-serif;
+  background: #1a638e;
+  padding: 2rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: auto;
+}
+
+.challenge-card {
+  display: flex;
+  flex-direction: column;
+  background: #9ddedfa9;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  margin: 2rem 0;
+  border: #1a638e 2px solid;
+}
+
+.challenge-card input {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  width: 75%;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: aqua;
+}
+
+.challenge-card button {
+  width: 25%;
+  align-self: flex-end;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.pii {
+  align-items: center;
+}
+.pii button {
+  align-self: center;
+  margin: 1rem;
+}
+
+.challenge-card p {
+  margin-top: 1rem;
+  font-weight: bold;
 }
