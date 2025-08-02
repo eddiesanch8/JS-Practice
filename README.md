@@ -2,6 +2,8 @@
 
 JavaScript Week 3 Assignment
 Live Demo
+https://js-practice-bice.vercel.app/
+
 
 How to Review This Assignment
 Primary Method - Console Output
